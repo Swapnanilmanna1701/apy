@@ -1,10 +1,10 @@
 import React, { ChangeEvent } from 'react';
 
-import { Demo } from 'types/demo';
+import { Demo } from '@/types/demo';
 
-import { InputSearch, Card } from 'components';
+import { InputSearch, Card } from '@/components';
 
-import { useSearchApi } from 'hooks/useSearchApi';
+import { useSearchApi } from '@/hooks/useSearchApi';
 
 const NOT_FOUND_TEXT = 'No matched demo found';
 

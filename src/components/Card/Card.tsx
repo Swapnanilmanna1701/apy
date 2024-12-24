@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 import { FaBolt } from 'react-icons/fa';
 
-import { Demo } from 'types/demo';
+import { Demo } from '@/types/demo';
 
-import { Button } from 'components';
+import { Button } from '@/components';
 
 export interface CardProps {
   data: Demo;

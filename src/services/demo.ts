@@ -1,6 +1,6 @@
-import { Demo } from 'types/demo';
+import { Demo } from '@/types/demo';
 
-import { data } from 'modules/apis/data';
+import { data } from '@/modules/apis/data';
 
 const getAllDemos = data;
 
