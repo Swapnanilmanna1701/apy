@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getAllDemos } from 'services/demo';
+import { getAllDemos } from '@/services/demo';
 
 export const useSearchApi = () => {
   const [demos, setDemos] = useState(getAllDemos);

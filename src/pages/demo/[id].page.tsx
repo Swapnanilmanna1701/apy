@@ -4,23 +4,23 @@ import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import SEO from '@bradgarropy/next-seo';
 
-import { getDemoById } from 'services/demo';
-import { Demo } from 'types/demo';
+import { getDemoById } from '@/services/demo';
+import { Demo } from '@/types/demo';
 
 import { Author } from './components/Author';
 import { Content } from './components/Content';
 
 function DemoPage() {
-  let router = useRouter();
-  let id = router.query.id as string;
+  const router = useRouter();
+  const id = router.query.id as string;
 
-  let [demo, setdemo] = React.useState<Demo | undefined>(getDemoById(id));
+  const [demo, setdemo] = React.useState<Demo | undefined>(getDemoById(id));
 
   React.useEffect(() => {
     setdemo(getDemoById(id));
   }, [id]);
 
-  let Component = dynamic(() => import(`../../modules/demos/${id}`), {
+  const Component = dynamic(() => import(`../../modules/demos/${id}`), {
     ssr: false,
   });
 
